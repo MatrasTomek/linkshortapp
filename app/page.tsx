@@ -14,7 +14,7 @@ const features = [
 	},
 	{
 		title: 'Bezpieczne konto',
-		description: 'Logowanie i autoryzacja oparte o Clerk dla bezproblemowego dostępu.',
+		description: 'Logowanie i autoryzacja oparte na Clerk dla bezproblemowego dostępu.',
 	},
 ];
 

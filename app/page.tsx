@@ -3,22 +3,23 @@ import { SignInButton } from '@clerk/nextjs';
 import { auth } from '@clerk/nextjs/server';
 import { Button } from '@/components/ui/button';
 
+const features = [
+	{
+		title: 'Błyskawiczne skracanie',
+		description: 'Zamieniaj długie adresy URL na krótkie linki gotowe do udostępniania.',
+	},
+	{
+		title: 'Panel zarządzania',
+		description: 'Przeglądaj i organizuj swoje linki w jednym, prostym dashboardzie.',
+	},
+	{
+		title: 'Bezpieczne konto',
+		description: 'Logowanie i autoryzacja oparte o Clerk dla bezproblemowego dostępu.',
+	},
+];
+
 export default async function Home() {
 	const { userId } = await auth();
-	const features = [
-		{
-			title: 'Błyskawiczne skracanie',
-			description: 'Zamieniaj długie adresy URL na krótkie linki gotowe do udostępnienia.',
-		},
-		{
-			title: 'Panel zarządzania',
-			description: 'Przeglądaj i organizuj swoje linki w jednym, prostym dashboardzie.',
-		},
-		{
-			title: 'Bezpieczne konto',
-			description: 'Logowanie i autoryzacja oparte o Clerk dla bezproblemowego dostępu.',
-		},
-	];
 
 	return (
 		<main className="flex flex-1 items-center px-4 py-16">

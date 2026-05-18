@@ -52,9 +52,7 @@ export default async function Home() {
 							</SignInButton>
 						)}
 						<Button asChild variant="outline">
-							<Link href="#funkcje" aria-label="Przewiń do sekcji funkcji">
-								Zobacz funkcje
-							</Link>
+							<Link href="#funkcje">Zobacz funkcje</Link>
 						</Button>
 					</div>
 				</div>

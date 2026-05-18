@@ -1,19 +1,8 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import { ClerkProvider, SignInButton, SignOutButton, SignUpButton, UserButton } from '@clerk/nextjs';
 import { auth } from '@clerk/nextjs/server';
 import { Button } from '@/components/ui/button';
 import './globals.css';
-
-const geistSans = Geist({
-	variable: '--font-geist-sans',
-	subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-	variable: '--font-geist-mono',
-	subsets: ['latin'],
-});
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -27,7 +16,7 @@ export default async function RootLayout({
 }>) {
 	const { userId } = await auth();
 	return (
-		<html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`} style={{ colorScheme: 'dark' }}>
+		<html lang="en" className="h-full antialiased dark" style={{ colorScheme: 'dark' }}>
 			<body className="min-h-full flex flex-col">
 				<ClerkProvider>
 					<header className="flex items-center justify-end gap-2 border-b px-4 py-3">

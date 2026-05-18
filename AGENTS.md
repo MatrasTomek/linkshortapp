@@ -8,7 +8,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 # LinkShortApp — Project Guidelines
 
-
 ⚠️ **EXTREMELY IMPORTANT!** ⚠️
 
 BEFORE you generate ANY code, you MUST ALWAYS read the relevant instruction files in the `/docs` directory.

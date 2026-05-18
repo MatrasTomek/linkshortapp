@@ -27,7 +27,7 @@ export default async function RootLayout({
 }>) {
 	const { userId } = await auth();
 	return (
-		<html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+		<html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`} style={{ colorScheme: 'dark' }}>
 			<body className="min-h-full flex flex-col">
 				<ClerkProvider>
 					<header className="flex items-center justify-end gap-2 border-b px-4 py-3">

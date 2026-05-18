@@ -8,6 +8,14 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 # LinkShortApp — Project Guidelines
 
+
+⚠️ **EXTREMELY IMPORTANT!** ⚠️
+
+BEFORE you generate ANY code, you MUST ALWAYS read the relevant instruction files in the `/docs` directory.
+Do not skip this step — the `.instructions.md` files contain critical rules and conventions that MUST be followed.
+
+---
+
 URL shortener — users authenticate via Clerk, create short links stored in Neon PostgreSQL, and are redirected when visiting short URLs.
 
 ## Tech Stack

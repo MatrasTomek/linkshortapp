@@ -19,9 +19,9 @@ const features = [
 ];
 
 const highlights = [
-	{ label: 'Utworzone linki', value: '120k+' },
-	{ label: 'Średni czas skrócenia', value: '< 2s' },
-	{ label: 'Dostępność platformy', value: '99.9%' },
+	{ label: 'Tworzenie krótkich linków', value: 'Natychmiast' },
+	{ label: 'Praca z zespołem', value: 'Współdzielenie' },
+	{ label: 'Bezpieczny dostęp', value: 'Clerk Auth' },
 ];
 
 export default async function Home() {
@@ -31,9 +31,9 @@ export default async function Home() {
 		<main className="flex flex-1 px-4 py-12 md:py-16">
 			<section className="mx-auto w-full max-w-5xl rounded-2xl border bg-card/60 p-8 shadow-sm backdrop-blur md:p-12">
 				<div className="mx-auto max-w-3xl text-center">
-					<p className="mx-auto inline-flex rounded-full border px-3 py-1 text-xs text-muted-foreground">
+					<span className="mx-auto inline-flex rounded-full border px-3 py-1 text-xs text-muted-foreground">
 						Platforma SaaS do zarządzania krótkimi linkami
-					</p>
+					</span>
 					<h1 className="mt-5 text-4xl font-semibold tracking-tight md:text-6xl">
 						Skracaj linki, mierz wyniki i skaluj kampanie z LinkShortApp
 					</h1>

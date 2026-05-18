@@ -7,16 +7,16 @@ export default async function Home() {
 	const { userId } = await auth();
 	const features = [
 		{
-			title: 'Blyskawiczne skracanie',
-			description: 'Zamieniaj dlugie adresy URL na krotkie linki gotowe do udostepnienia.',
+			title: 'Błyskawiczne skracanie',
+			description: 'Zamieniaj długie adresy URL na krótkie linki gotowe do udostępnienia.',
 		},
 		{
-			title: 'Panel zarzadzania',
-			description: 'Przegladaj i organizuj swoje linki w jednym, prostym dashboardzie.',
+			title: 'Panel zarządzania',
+			description: 'Przeglądaj i organizuj swoje linki w jednym, prostym dashboardzie.',
 		},
 		{
 			title: 'Bezpieczne konto',
-			description: 'Logowanie i autoryzacja oparte o Clerk dla bezproblemowego dostepu.',
+			description: 'Logowanie i autoryzacja oparte o Clerk dla bezproblemowego dostępu.',
 		},
 	];
 
@@ -26,17 +26,17 @@ export default async function Home() {
 				<div className="mx-auto max-w-2xl text-center">
 					<h1 className="text-4xl font-semibold tracking-tight md:text-5xl">LinkShortApp</h1>
 					<p className="mt-4 text-lg text-muted-foreground">
-						Nowoczesna strona docelowa do skracania linkow, ktora ulatwia tworzenie, udostepnianie i
-						kontrole nad adresami URL.
+						Nowoczesna strona docelowa do skracania linków, która ułatwia tworzenie, udostępnianie i
+						kontrolę nad adresami URL.
 					</p>
 					<div className="mt-8 flex items-center justify-center gap-3">
 						{userId ? (
 							<Button asChild>
-								<Link href="/dashboard">Przejdz do dashboardu</Link>
+								<Link href="/dashboard">Przejdź do dashboardu</Link>
 							</Button>
 						) : (
 							<SignInButton mode="modal">
-								<Button>Zaloguj sie i zacznij</Button>
+								<Button>Zaloguj się i zacznij</Button>
 							</SignInButton>
 						)}
 					</div>

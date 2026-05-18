@@ -38,7 +38,7 @@ export default async function Home() {
 						Shorten links, measure results, and scale campaigns with LinkShortApp
 					</h1>
 					<p className="mt-5 text-lg text-muted-foreground">
-						Create short URLs for social media, newsletters, and ads. Everything is in one dashboard,
+						Create short URLs for social media, newsletters, and ads. Everything in one dashboard,
 						with secure sign-in and fast access for your team.
 					</p>
 					<div className="mt-8 flex flex-wrap items-center justify-center gap-3">

@@ -19,9 +19,9 @@ const features = [
 ];
 
 const highlights = [
-	{ label: 'Tworzenie krótkich linków', value: 'Natychmiast' },
-	{ label: 'Praca z zespołem', value: 'Współdzielenie' },
-	{ label: 'Bezpieczny dostęp', value: 'Clerk Auth' },
+	{ label: 'Tworzenie krótkich linków', value: 'Bez zbędnych kroków' },
+	{ label: 'Praca z zespołem', value: 'Jedno miejsce dla całego zespołu' },
+	{ label: 'Bezpieczny dostęp', value: 'Sprawdzone logowanie i autoryzacja' },
 ];
 
 export default async function Home() {

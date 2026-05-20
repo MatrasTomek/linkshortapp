@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { ClerkProvider, SignInButton, SignOutButton, SignUpButton, UserButton } from '@clerk/nextjs';
+import { shadcn } from '@clerk/themes';
 import { auth } from '@clerk/nextjs/server';
 import { Button } from '@/components/ui/button';
 import './globals.css';
@@ -18,7 +19,7 @@ export default async function RootLayout({
 	return (
 		<html lang="en" className="h-full antialiased dark" style={{ colorScheme: 'dark' }}>
 			<body className="min-h-full flex flex-col">
-				<ClerkProvider>
+				<ClerkProvider appearance={{ theme: shadcn }}>
 					<header className="flex items-center justify-end gap-2 border-b px-4 py-3">
 						{!userId && (
 							<>

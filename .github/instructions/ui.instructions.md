@@ -1,4 +1,5 @@
 ---
+description: This file describes the UI component guidelines for the project, specifically regarding the use of shadcn/ui components.
 applyTo: '**/*.{ts,tsx}'
 ---
 

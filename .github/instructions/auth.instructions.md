@@ -1,4 +1,5 @@
 ---
+description: This file describes the authentication rules and guidelines for the project, specifically regarding the exclusive use of Clerk for all auth-related functionality.
 applyTo: '**/*.{ts,tsx}'
 ---
 

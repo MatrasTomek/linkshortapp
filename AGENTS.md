@@ -10,7 +10,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 ⚠️ **EXTREMELY IMPORTANT!** ⚠️
 
-BEFORE you generate ANY code, you MUST ALWAYS read the relevant instruction files in the `/docs` directory.
 Do not skip this step — the `.instructions.md` files contain critical rules and conventions that MUST be followed.
 
 ---
@@ -28,12 +27,3 @@ URL shortener — users authenticate via Clerk, create short links stored in Neo
 | Auth      | Clerk (`@clerk/nextjs` v7)                 |
 | ORM       | Drizzle ORM + Neon PostgreSQL              |
 | Variants  | `class-variance-authority` (CVA)           |
-
-## Detailed Instructions
-
-Specific conventions are defined in the `/docs` folder as `.instructions.md` files with `applyTo` patterns. ALWAYS refer to the relevant .md file BEFORE generating any code:
-
-| File                                                       | Covers                                               |
-| ---------------------------------------------------------- | ---------------------------------------------------- |
-| [`/docs/auth.instructions.md`](/docs/auth.instructions.md) | Clerk-only auth, protected routes, modal sign-in/out |
-| [`/docs/ui.instructions.md`](/docs/ui.instructions.md)     | shadcn/ui only — no custom components allowed        |

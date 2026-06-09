@@ -1,6 +1,6 @@
 ---
 description: Use these instructions when implementing or modifying data mutation flows, server actions, and write operations in TypeScript/TSX files.
-applyTo: '**/*.{ts,tsx}'
+applyTo: "**/*.{ts,tsx}"
 ---
 
 # Server Actions — Data Mutations
@@ -23,6 +23,6 @@ All data mutations in this app must be implemented via Server Actions.
 ## Action Result Contract
 
 - Prefer a shared result shape for all actions, such as:
-    - success branch with `success: true` and optional `data`
-    - error branch with `success: false` and a user-safe `error` message
+  - success branch with `success: true` and optional `data`
+  - error branch with `success: false` and a user-safe `error` message
 - Handle validation, auth, and database failures by returning the error branch, not by throwing.

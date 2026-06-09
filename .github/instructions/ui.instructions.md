@@ -1,6 +1,6 @@
 ---
 description: This file describes the UI component guidelines for the project, specifically regarding the use of shadcn/ui components.
-applyTo: '**/*.{ts,tsx}'
+applyTo: "**/*.{ts,tsx}"
 ---
 
 # UI Components — shadcn/ui
@@ -24,8 +24,8 @@ npx shadcn@latest add <component-name>
 Components are installed into `components/ui/` and can be imported directly:
 
 ```tsx
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 ```
 
 ## Theme

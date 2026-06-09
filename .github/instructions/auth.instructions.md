@@ -1,6 +1,6 @@
 ---
 description: This file describes the authentication rules and guidelines for the project, specifically regarding the exclusive use of Clerk for all auth-related functionality.
-applyTo: '**/*.{ts,tsx}'
+applyTo: "**/*.{ts,tsx}"
 ---
 
 # Authentication — Clerk
@@ -23,25 +23,25 @@ Enforce this via Clerk's `middleware.ts` using `clerkMiddleware` and `createRout
 
 ```ts
 // middleware.ts
-import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
-import { NextResponse } from 'next/server';
+import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
+import { NextResponse } from "next/server";
 
-const isProtectedRoute = createRouteMatcher(['/dashboard(.*)']);
+const isProtectedRoute = createRouteMatcher(["/dashboard(.*)"]);
 
 export default clerkMiddleware(async (auth, req) => {
-	const { userId } = await auth();
+  const { userId } = await auth();
 
-	if (isProtectedRoute(req)) {
-		await auth.protect();
-	}
+  if (isProtectedRoute(req)) {
+    await auth.protect();
+  }
 
-	if (userId && req.nextUrl.pathname === '/') {
-		return NextResponse.redirect(new URL('/dashboard', req.url));
-	}
+  if (userId && req.nextUrl.pathname === "/") {
+    return NextResponse.redirect(new URL("/dashboard", req.url));
+  }
 });
 
 export const config = {
-	matcher: ['/((?!_next|.*\\..*).*)'],
+  matcher: ["/((?!_next|.*\\..*).*)"],
 };
 ```
 

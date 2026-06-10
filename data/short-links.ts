@@ -66,14 +66,12 @@ function isUniqueViolation(error: unknown) {
 }
 
 function createRandomShortCode() {
-  let code = "";
+  const randomValues = crypto.getRandomValues(new Uint32Array(SHORT_CODE_LENGTH));
 
-  for (let index = 0; index < SHORT_CODE_LENGTH; index += 1) {
-    const randomIndex = Math.floor(Math.random() * SHORT_CODE_ALPHABET.length);
-    code += SHORT_CODE_ALPHABET[randomIndex];
-  }
-
-  return code;
+  return Array.from(
+    randomValues,
+    (value) => SHORT_CODE_ALPHABET[value % SHORT_CODE_ALPHABET.length],
+  ).join("");
 }
 
 async function insertShortLink(input: {

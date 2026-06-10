@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import { auth } from "@clerk/nextjs/server";
 import { getShortLinksByUserId } from "@/data/short-links";
 import { CreateLinkDialog } from "./create-link-dialog";
@@ -7,7 +8,7 @@ export default async function DashboardPage() {
   const { userId } = await auth();
 
   if (!userId) {
-    return null;
+    redirect("/");
   }
 
   const links = await getShortLinksByUserId(userId);

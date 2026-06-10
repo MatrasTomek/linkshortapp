@@ -13,5 +13,12 @@ export async function GET(
     return new NextResponse("Not found", { status: 404 });
   }
 
+  const isAllowedProtocol =
+    link.url.startsWith("https://") || link.url.startsWith("http://");
+
+  if (!isAllowedProtocol) {
+    return new NextResponse("Invalid redirect target", { status: 400 });
+  }
+
   return NextResponse.redirect(link.url, { status: 307 });
 }

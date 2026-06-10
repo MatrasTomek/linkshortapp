@@ -27,3 +27,7 @@ Instead, return:
 1. A brief statement that you cannot perform a real code-level audit without file access.
 2. An empty findings table using the required columns.
 3. A concise request for the minimum set of files/folders needed to continue (for example: auth config, API routes, middleware, DB access layer, environment/config files, and redirect logic).
+
+## Feedback
+
+Next ask the user which issues they wats to fix by either replying "all", or coma separated list of IDs. After the reply, run separate sub agent (#runSubagent) to fix each issue that the user has specified. Each subagent should report back with a simple `subAgentSuccess: true | false`.

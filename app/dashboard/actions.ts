@@ -68,7 +68,10 @@ type DeleteShortLinkActionResult =
     };
 
 const createShortLinkSchema = z.object({
-  url: z.url({ error: "Podaj poprawny adres URL." }),
+  url: z.url({ error: "Podaj poprawny adres URL." }).refine(
+    (val) => val.startsWith("https://") || val.startsWith("http://"),
+    { message: "URL musi używać protokołu http lub https." },
+  ),
   customCode: z
     .string()
     .trim()
@@ -83,7 +86,10 @@ const createShortLinkSchema = z.object({
 
 const updateShortLinkSchema = z.object({
   id: z.number().int().positive({ error: "Niepoprawny identyfikator linku." }),
-  url: z.url({ error: "Podaj poprawny adres URL." }),
+  url: z.url({ error: "Podaj poprawny adres URL." }).refine(
+    (val) => val.startsWith("https://") || val.startsWith("http://"),
+    { message: "URL musi używać protokołu http lub https." },
+  ),
   shortCode: z
     .string()
     .trim()
